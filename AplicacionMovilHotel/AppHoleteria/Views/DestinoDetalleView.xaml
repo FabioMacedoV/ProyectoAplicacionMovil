@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AplicacionMovilHotel.AppHoleteria.Views.DestinoDetalleView">
+             x:Class="AplicacionMovilHotel.AppHoleteria.Views.DestinoDetalleView"
+			 BackgroundColor="#d9d9d9">
     <ContentPage.Content>
 		<ScrollView>
 			<StackLayout Padding="20">
-				<Label Text="Detalles del Destino" FontSize="24" FontAttributes="Bold"/>
-				<Label Text="{Binding nombre}" FontSize="20"/>
+				<Label Text="Detalles del Destino" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
+				<Label Text="{Binding nombre}" FontSize="20" TextColor="Black"/>
 				<Image Source="{Binding imagen}" WidthRequest="250"></Image>
-				<Label Text="{Binding descripcion}" FontSize="16"/>
+				<Label Text="{Binding descripcion}" FontSize="16" TextColor="Black"/>
 
-				<Label Text="Si quieres viajar a este lugar, te damos las siguientes recomendaciones"></Label>
+				<Label Text="Si quieres viajar a este lugar, te damos las siguientes recomendaciones"
+					   TextColor="Black"></Label>
 
-				<Label Text="Hoteles:"></Label>
+				<Label Text="Hoteles:" TextColor="Black"></Label>
 				<CollectionView ItemsSource="{Binding Hoteles}" 
 								ItemsLayout="HorizontalList" 
 								HeightRequest="250"
@@ -33,7 +35,7 @@
 					</CollectionView.ItemTemplate>
 				</CollectionView>
 
-				<Label Text="Restaurantes:"></Label>
+				<Label Text="Restaurantes:" TextColor="Black"></Label>
 				<CollectionView ItemsSource="{Binding Restaurantes}" 
 					ItemsLayout="HorizontalList" 
 					HeightRequest="250"
@@ -54,7 +56,7 @@
 					</CollectionView.ItemTemplate>
 				</CollectionView>
 
-				<Label Text="Transportes:"></Label>
+				<Label Text="Transportes:" TextColor="Black"></Label>
 				<CollectionView ItemsSource="{Binding Transportes}" 
 				ItemsLayout="HorizontalList" 
 				HeightRequest="250"
