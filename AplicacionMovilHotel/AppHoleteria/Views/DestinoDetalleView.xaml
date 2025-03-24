@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicacionMovilHotel.AppHoleteria.Views.DestinoDetalleView">
+    <ContentPage.Content>
+		<StackLayout Padding="20">
+			<Label Text="Detalles del Destino" FontSize="24" FontAttributes="Bold"/>
+			<Label Text="{Binding nombre}" FontSize="20"/>
+			<Label Text="{Binding descripcion}" FontSize="16"/>
+
+			<Label Text="Si quieres viajar a este lugar, te damos las siguientes recomendaciones"></Label>
+
+			<CollectionView ItemsSource="{Binding Hoteles}" 
+                ItemsLayout="HorizontalList" 
+                HeightRequest="250"
+                SelectionMode="Single"
+                SelectionChanged="OnHotelSelected">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<StackLayout Padding="10">
+							<Frame CornerRadius="10" HasShadow="True" WidthRequest="200">
+								<StackLayout>
+									<Image Source="{Binding ImagenUrl}" HeightRequest="100" Aspect="AspectFill"/>
+									<Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+									<Label Text="{Binding Descripcion}" FontSize="12" TextColor="Gray"/>
+								</StackLayout>
+							</Frame>
+						</StackLayout>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

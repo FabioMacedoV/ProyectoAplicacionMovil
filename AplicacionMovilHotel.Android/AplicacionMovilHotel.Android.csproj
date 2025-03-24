@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5CD226C3-F78F-4B47-B171-37834D5CF909}</ProjectGuid>
+    <ProjectGuid>{48C395FD-9752-4266-8CB4-0F6252C2C900}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ProyectoHoteleria.Droid</RootNamespace>
-    <AssemblyName>ProyectoHoteleria.Android</AssemblyName>
+    <RootNamespace>AplicacionMovilHotel.Droid</RootNamespace>
+    <AssemblyName>AplicacionMovilHotel.Android</AssemblyName>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -57,6 +57,9 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamd.Plugins.Forms.ImageCarousel">
+      <Version>1.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -85,13 +88,27 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProyectoHoteleria\ProyectoHoteleria.csproj">
-      <Project>{9B921DEA-9E05-4AED-B1C8-A2D36A5F7E81}</Project>
-      <Name>ProyectoHoteleria</Name>
+    <ProjectReference Include="..\AplicacionMovilHotel\AplicacionMovilHotel.csproj">
+      <Project>{744DF443-6C0C-4D27-B46C-C8F39790A0E3}</Project>
+      <Name>AplicacionMovilHotel</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arequipa.png" />
+    <AndroidResource Include="Resources\drawable\huancayo.png" />
+    <AndroidResource Include="Resources\drawable\ica.png" />
+    <AndroidResource Include="Resources\drawable\tumbes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lagotiticaca.png" />
+    <AndroidResource Include="Resources\drawable\machupichu.png" />
+    <AndroidResource Include="Resources\drawable\nazca.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

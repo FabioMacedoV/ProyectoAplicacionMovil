@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="AplicacionMovilHotel.AppHoleteria.Views.SearchView"
+			 BackgroundColor="white">
+
+	<ContentPage.Content>
+		
+        <StackLayout>
+			<StackLayout Orientation="Horizontal"
+			 BackgroundColor="white"
+			 HorizontalOptions="Fill">
+				<Image Source="logo.png" WidthRequest="200" HorizontalOptions="Start"></Image>
+				<Label Text="" HorizontalOptions="FillAndExpand"></Label>
+				<Image Source="usuario.png" WidthRequest="40" HorizontalOptions="End"></Image>
+			</StackLayout>
+
+			<StackLayout>
+				<SearchBar x:Name="DestinoSearchBar"
+						   TextChanged="fnBuscarDestino"
+						   Placeholder="Buscar destino..."/>
+			</StackLayout>
+
+			<StackLayout>
+				<ListView ItemsSource="{Binding DestinosFiltrados}" 
+						  HasUnevenRows="True"
+						  SelectionMode="Single"
+						  ItemSelected="OnDestinoSeleccionado">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<StackLayout Padding="10">
+									<Label Text="{Binding nombre}" 
+										   FontSize="Large" 
+										   FontAttributes="Bold"
+										   TextColor="Black"/>
+									<Image Source="{Binding imagen}" 
+										   HeightRequest="150"
+										   WidthRequest="300"/>
+									<Label Text="{Binding descripcion}" 
+										   FontSize="Medium"
+										   TextColor="Black"/>
+									<Label Text="{Binding recomendaciones}"
+										   FontSize="Small" 
+										   TextColor="Black"/>
+								</StackLayout>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+			
+		</StackLayout>
+		
+		
+		
+    </ContentPage.Content>
+</ContentPage>

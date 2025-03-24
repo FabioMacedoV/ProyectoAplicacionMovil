@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+             x:Class="AplicacionMovilHotel.MainPage"
+			 BackgroundColor="White">
+	<ScrollView>
+		<StackLayout>
+			<StackLayout Orientation="Horizontal"
+				 BackgroundColor="white"
+				 HorizontalOptions="Fill">
+				<Image Source="logo.png" WidthRequest="200" HorizontalOptions="Start"></Image>
+				<Label Text="" HorizontalOptions="FillAndExpand"></Label>
+				<Image Source="usuario.png" WidthRequest="40" HorizontalOptions="End"></Image>
+			</StackLayout>
+
+			<StackLayout VerticalOptions="Center"
+				 HorizontalOptions="Center">
+				<Label Text="¿Listo para planear tu viaje por el Perú? Te recomendamos lo que necesitas."
+			   TextColor="Black"
+			   VerticalOptions="Center"></Label>
+				<Button Text="Buscar"
+				BackgroundColor="SkyBlue"
+				Clicked="nfPaginaBuscar_Clicked"
+				WidthRequest="200"/>
+			</StackLayout>
+
+			<!--Destinos-->
+			<StackLayout>
+				<Label Text="Destinos:" TextColor="Black"></Label>
+				<StackLayout HorizontalOptions="Center" VerticalOptions="End">
+					<controls:ImageCarousel x:Name="imgSider" HeightRequest="200" WidthRequest="400" />
+				</StackLayout>
+			</StackLayout>
+
+			<!--Rewstaurantes-->
+			<StackLayout>
+				<Label Text="Restaurantes:" TextColor="Black"></Label>
+				<StackLayout HorizontalOptions="Center" VerticalOptions="End">
+					<controls:ImageCarousel x:Name="imgSider1" HeightRequest="200" WidthRequest="400" />
+				</StackLayout>
+			</StackLayout>
+
+			<!--Transportes-->
+			<StackLayout>
+				<Label Text="Trasportes:" TextColor="Black"></Label>
+				<StackLayout HorizontalOptions="Center" VerticalOptions="End">
+					<controls:ImageCarousel x:Name="imgSider2" HeightRequest="200" WidthRequest="400" />
+				</StackLayout>
+			</StackLayout>
+
+			<!--Guias-->
+			<StackLayout>
+				<Label Text="Guias:" TextColor="Black"></Label>
+				<StackLayout HorizontalOptions="Center" VerticalOptions="End">
+					<controls:ImageCarousel x:Name="imgSider3" HeightRequest="200" WidthRequest="400" />
+				</StackLayout>
+			</StackLayout>
+
+		</StackLayout>
+	</ScrollView>
+		
+
+</ContentPage>
