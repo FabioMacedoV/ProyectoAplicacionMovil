@@ -15,5 +15,6 @@ namespace AplicacionMovilHotel.AppHoleteria.Models
         public string recomendaciones {  get; set; }
         public ObservableCollection<HotelModel> Hoteles { get; set; }
         public ObservableCollection<RestauranteModel> Restaurantes { get; set; }
+        public ObservableCollection<TransporteModel> Transportes { get; set; }
     }
 }

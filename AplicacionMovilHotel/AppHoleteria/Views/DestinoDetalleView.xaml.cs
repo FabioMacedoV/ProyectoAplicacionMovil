@@ -27,13 +27,34 @@ namespace AplicacionMovilHotel.AppHoleteria.Views
             if (e.CurrentSelection.Count == 0)
                 return;
 
-            // Obtener el hotel seleccionado
             var selectedHotel = (HotelModel)e.CurrentSelection.FirstOrDefault();
 
-            // Navegar a la página de detalles pasando el hotel seleccionado
             await Navigation.PushAsync(new HotelDetalleView(selectedHotel));
 
-            // Desmarcar selección para permitir futuras selecciones
+            ((CollectionView)sender).SelectedItem = null;
+        }
+
+        private async void OnHotelSelectedRes(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.Count == 0)
+                return;
+
+            var selectedHotel = (RestauranteModel)e.CurrentSelection.FirstOrDefault();
+
+            await Navigation.PushAsync(new RestauranteDetalleView(selectedHotel));
+
+            ((CollectionView)sender).SelectedItem = null;
+        }
+
+        private async void OnHotelSelectedTra(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.Count == 0)
+                return;
+
+            var selectedHotel = (TransporteModel)e.CurrentSelection.FirstOrDefault();
+
+            await Navigation.PushAsync(new TransporteDetalleView(selectedHotel));
+
             ((CollectionView)sender).SelectedItem = null;
         }
     }

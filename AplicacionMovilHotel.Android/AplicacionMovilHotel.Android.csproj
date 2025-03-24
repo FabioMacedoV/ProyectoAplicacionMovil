@@ -110,5 +110,25 @@
     <AndroidResource Include="Resources\drawable\machupichu.png" />
     <AndroidResource Include="Resources\drawable\nazca.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\logo_adaptive_fore.png" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\logo.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logo.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logo_adaptive_back.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logo_adaptive_fore.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logo.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logo_adaptive_back.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logo_adaptive_fore.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logo.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logo_adaptive_back.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logo_adaptive_fore.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logo.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logo_adaptive_back.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logo_adaptive_fore.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logo.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logo_adaptive_back.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logo_adaptive_fore.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

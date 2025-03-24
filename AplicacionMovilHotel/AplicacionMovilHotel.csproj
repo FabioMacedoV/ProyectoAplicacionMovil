@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppHoleteria\Resources\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Mono.Android">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v13.0\Mono.Android.dll</HintPath>
     </Reference>
@@ -34,7 +30,13 @@
     <EmbeddedResource Update="AppHoleteria\Views\HotelDetalleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="AppHoleteria\Views\RestauranteDetalleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="AppHoleteria\Views\SearchView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AppHoleteria\Views\TransporteDetalleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

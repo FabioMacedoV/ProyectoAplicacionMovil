@@ -40,9 +40,6 @@
 									<Label Text="{Binding descripcion}" 
 										   FontSize="Medium"
 										   TextColor="Black"/>
-									<Label Text="{Binding recomendaciones}"
-										   FontSize="Small" 
-										   TextColor="Black"/>
 								</StackLayout>
 							</ViewCell>
 						</DataTemplate>

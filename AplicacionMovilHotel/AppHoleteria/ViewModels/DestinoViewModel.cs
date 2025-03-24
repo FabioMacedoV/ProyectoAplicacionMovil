@@ -20,7 +20,7 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
             Destinos = new ObservableCollection<DestinoModel>
             {
                 new DestinoModel
-            {
+                {
                 id = 1,
                 nombre = "Machu Picchu",
                 imagen = "machupichu.jpg",
@@ -97,11 +97,11 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                         new ServicioModel { Id = 9, Nombre = "Servicio a la habitación", Descripcion = "Disponible las 24 horas" }
                     }
                 }
-                },
+            },
                 Restaurantes = new ObservableCollection<RestauranteModel>
                 {
                     new RestauranteModel
-                {
+                    {
                     Id = 1,
                     Nombre = "Indio Feliz",
                     TipoComida = "Fusión Peruana-Francesa",
@@ -115,9 +115,9 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Servicios = new List<string> { "WiFi", "Reservas", "Bar", "Vegetariano" },
                     MenuDestacado = new List<string> { "Trucha a la mantequilla", "Ceviche de trucha", "Pisco Sour" },
                     Calificacion = 4.8
-                },
-                new RestauranteModel
-                {
+                    },
+                    new RestauranteModel
+                    {
                     Id = 2,
                     Nombre = "Tree House Restaurant",
                     TipoComida = "Gourmet Peruana",
@@ -131,9 +131,9 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Servicios = new List<string> { "WiFi", "Reservas", "Vegano", "Vista panorámica" },
                     MenuDestacado = new List<string> { "Lomo saltado", "Ají de gallina", "Chicha morada" },
                     Calificacion = 4.7
-                },
-                new RestauranteModel
-                {
+                    },
+                    new RestauranteModel
+                    {
                     Id = 3,
                     Nombre = "Toto's House",
                     TipoComida = "Peruana Tradicional",
@@ -147,9 +147,9 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Servicios = new List<string> { "WiFi", "Música en vivo", "Buffet", "Desayunos" },
                     MenuDestacado = new List<string> { "Cuy al horno", "Papa a la huancaína", "Chicha de jora" },
                     Calificacion = 4.5
-                },
-                new RestauranteModel
-                {
+                    },
+                    new RestauranteModel
+                    {
                     Id = 4,
                     Nombre = "El Mapi Restaurant",
                     TipoComida = "Internacional",
@@ -163,8 +163,71 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Servicios = new List<string> { "WiFi", "Reservas", "Desayunos buffet", "Opciones sin gluten" },
                     MenuDestacado = new List<string> { "Sopa criolla", "Alpaca a la parrilla", "Tiramisú de quinoa" },
                     Calificacion = 4.9
-                }
+                    },
                 },
+                    Transportes = new ObservableCollection<TransporteModel>{
+                        new TransporteModel
+                {
+                    Id = 1,
+                    Nombre = "Expreso Inca Rail",
+                    Tipo = "Tren",
+                    Empresa = "Inca Rail",
+                    Origen = "Cusco",
+                    Destino = "Machu Picchu",
+                    Precio = 150.00m,
+                    HorarioSalida = "06:00 AM",
+                    HorarioLlegada = "09:00 AM",
+                    Capacidad = 200,
+                    Disponible = true,
+                    ImagenUrl = "inca_rail.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 2,
+                    Nombre = "PeruRail Vistadome",
+                    Tipo = "Tren",
+                    Empresa = "PeruRail",
+                    Origen = "Ollantaytambo",
+                    Destino = "Machu Picchu",
+                    Precio = 120.00m,
+                    HorarioSalida = "07:20 AM",
+                    HorarioLlegada = "09:50 AM",
+                    Capacidad = 180,
+                    Disponible = true,
+                    ImagenUrl = "perurail_vistadome.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 3,
+                    Nombre = "Bus Hidroeléctrica",
+                    Tipo = "Bus",
+                    Empresa = "Transporte Machu Picchu",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 10.00m,
+                    HorarioSalida = "02:00 PM",
+                    HorarioLlegada = "03:30 PM",
+                    Capacidad = 50,
+                    Disponible = true,
+                    ImagenUrl = "bus_hidroelectrica.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 4,
+                    Nombre = "Caminata desde Hidroeléctrica",
+                    Tipo = "Caminata",
+                    Empresa = "Independiente",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 0.00m,
+                    HorarioSalida = "Libre",
+                    HorarioLlegada = "4 horas aprox.",
+                    Capacidad = 100,
+                    Disponible = true,
+                    ImagenUrl = "camino_hidroelectrica.jpg"
+                },
+                    },
+
             },
             new DestinoModel
             {
@@ -312,6 +375,68 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Calificacion = 4.9
                 }
                 },
+                Transportes = new ObservableCollection<TransporteModel>{
+                        new TransporteModel
+                {
+                    Id = 1,
+                    Nombre = "Expreso Inca Rail",
+                    Tipo = "Tren",
+                    Empresa = "Inca Rail",
+                    Origen = "Cusco",
+                    Destino = "Machu Picchu",
+                    Precio = 150.00m,
+                    HorarioSalida = "06:00 AM",
+                    HorarioLlegada = "09:00 AM",
+                    Capacidad = 200,
+                    Disponible = true,
+                    ImagenUrl = "inca_rail.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 2,
+                    Nombre = "PeruRail Vistadome",
+                    Tipo = "Tren",
+                    Empresa = "PeruRail",
+                    Origen = "Ollantaytambo",
+                    Destino = "Machu Picchu",
+                    Precio = 120.00m,
+                    HorarioSalida = "07:20 AM",
+                    HorarioLlegada = "09:50 AM",
+                    Capacidad = 180,
+                    Disponible = true,
+                    ImagenUrl = "perurail_vistadome.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 3,
+                    Nombre = "Bus Hidroeléctrica",
+                    Tipo = "Bus",
+                    Empresa = "Transporte Machu Picchu",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 10.00m,
+                    HorarioSalida = "02:00 PM",
+                    HorarioLlegada = "03:30 PM",
+                    Capacidad = 50,
+                    Disponible = true,
+                    ImagenUrl = "bus_hidroelectrica.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 4,
+                    Nombre = "Caminata desde Hidroeléctrica",
+                    Tipo = "Caminata",
+                    Empresa = "Independiente",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 0.00m,
+                    HorarioSalida = "Libre",
+                    HorarioLlegada = "4 horas aprox.",
+                    Capacidad = 100,
+                    Disponible = true,
+                    ImagenUrl = "camino_hidroelectrica.jpg"
+                },
+                    },
             },
             new DestinoModel
             {
@@ -459,6 +584,68 @@ namespace AplicacionMovilHotel.AppHoleteria.ViewModels
                     Calificacion = 4.9
                 }
                 },
+                Transportes = new ObservableCollection<TransporteModel>{
+                        new TransporteModel
+                {
+                    Id = 1,
+                    Nombre = "Expreso Inca Rail",
+                    Tipo = "Tren",
+                    Empresa = "Inca Rail",
+                    Origen = "Cusco",
+                    Destino = "Machu Picchu",
+                    Precio = 150.00m,
+                    HorarioSalida = "06:00 AM",
+                    HorarioLlegada = "09:00 AM",
+                    Capacidad = 200,
+                    Disponible = true,
+                    ImagenUrl = "inca_rail.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 2,
+                    Nombre = "PeruRail Vistadome",
+                    Tipo = "Tren",
+                    Empresa = "PeruRail",
+                    Origen = "Ollantaytambo",
+                    Destino = "Machu Picchu",
+                    Precio = 120.00m,
+                    HorarioSalida = "07:20 AM",
+                    HorarioLlegada = "09:50 AM",
+                    Capacidad = 180,
+                    Disponible = true,
+                    ImagenUrl = "perurail_vistadome.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 3,
+                    Nombre = "Bus Hidroeléctrica",
+                    Tipo = "Bus",
+                    Empresa = "Transporte Machu Picchu",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 10.00m,
+                    HorarioSalida = "02:00 PM",
+                    HorarioLlegada = "03:30 PM",
+                    Capacidad = 50,
+                    Disponible = true,
+                    ImagenUrl = "bus_hidroelectrica.jpg"
+                },
+                new TransporteModel
+                {
+                    Id = 4,
+                    Nombre = "Caminata desde Hidroeléctrica",
+                    Tipo = "Caminata",
+                    Empresa = "Independiente",
+                    Origen = "Hidroeléctrica",
+                    Destino = "Machu Picchu Pueblo",
+                    Precio = 0.00m,
+                    HorarioSalida = "Libre",
+                    HorarioLlegada = "4 horas aprox.",
+                    Capacidad = 100,
+                    Disponible = true,
+                    ImagenUrl = "camino_hidroelectrica.jpg"
+                },
+                    },
             }
             };
 
